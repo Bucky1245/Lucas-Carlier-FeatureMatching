@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F143B4DA-6834-430D-A027-2E97423D13B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucas.carlier.FeatureMatching", "src\Lucas.carlier.FeatureMatching\Lucas.carlier.FeatureMatching.csproj", "{A2E02A32-C934-4500-A532-C10D3E864666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucas.carlier.FeatureMatching.Console", "src\Lucas.carlier.FeatureMatching.Console\Lucas.carlier.FeatureMatching.Console.csproj", "{60CACBD2-8E8D-44B0-85B1-71DD994273ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucas.carlier.FeatureMatching.WebApi", "src\Lucas.carlier.FeatureMatching.WebApi\Lucas.carlier.FeatureMatching.WebApi.csproj", "{90006B7C-97D1-4788-9E00-DB354B5861B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F8038230-0461-40DB-93A6-959E218B1A38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucas.carlier.FeatureMatching.Tests", "tests\Lucas.carlier.FeatureMatching.Tests\Lucas.carlier.FeatureMatching.Tests.csproj", "{75194F2E-2E14-4B3F-BB91-1B6B76FEEF78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2E02A32-C934-4500-A532-C10D3E864666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E02A32-C934-4500-A532-C10D3E864666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E02A32-C934-4500-A532-C10D3E864666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E02A32-C934-4500-A532-C10D3E864666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60CACBD2-8E8D-44B0-85B1-71DD994273ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CACBD2-8E8D-44B0-85B1-71DD994273ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60CACBD2-8E8D-44B0-85B1-71DD994273ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60CACBD2-8E8D-44B0-85B1-71DD994273ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90006B7C-97D1-4788-9E00-DB354B5861B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90006B7C-97D1-4788-9E00-DB354B5861B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90006B7C-97D1-4788-9E00-DB354B5861B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90006B7C-97D1-4788-9E00-DB354B5861B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75194F2E-2E14-4B3F-BB91-1B6B76FEEF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75194F2E-2E14-4B3F-BB91-1B6B76FEEF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75194F2E-2E14-4B3F-BB91-1B6B76FEEF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75194F2E-2E14-4B3F-BB91-1B6B76FEEF78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A2E02A32-C934-4500-A532-C10D3E864666} = {F143B4DA-6834-430D-A027-2E97423D13B9}
+		{60CACBD2-8E8D-44B0-85B1-71DD994273ED} = {F143B4DA-6834-430D-A027-2E97423D13B9}
+		{90006B7C-97D1-4788-9E00-DB354B5861B7} = {F143B4DA-6834-430D-A027-2E97423D13B9}
+		{75194F2E-2E14-4B3F-BB91-1B6B76FEEF78} = {F8038230-0461-40DB-93A6-959E218B1A38}
+	EndGlobalSection
+EndGlobal

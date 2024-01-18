@@ -1,0 +1,6 @@
+@Lucas.carlier.FeatureMatching.WebApi_HostAddress = http://localhost:5210
+
+GET {{Lucas.carlier.FeatureMatching.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
