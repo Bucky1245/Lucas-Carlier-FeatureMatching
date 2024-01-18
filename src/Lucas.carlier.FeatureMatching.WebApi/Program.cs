@@ -1,3 +1,6 @@
+using Lucas.carlier.FeatureMatching;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,29 +19,24 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+app.MapPost("/FeatureMatching", async ([FromForm] IFormFileCollection files) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+    if (files.Count != 2)
+        return Results.BadRequest();
+    using var objectSourceStream = files[0].OpenReadStream();
+    using var objectMemoryStream = new MemoryStream();
+    objectSourceStream.CopyTo(objectMemoryStream);
+    var imageObjectData = objectMemoryStream.ToArray();
+    using var sceneSourceStream = files[1].OpenReadStream();
+    using var sceneMemoryStream = new MemoryStream();
+    sceneSourceStream.CopyTo(sceneMemoryStream);
+    var imageSceneData = sceneMemoryStream.ToArray();
+    // Your implementation code
+    var objectDetection = new ObjectDetection();
+    var result = await objectDetection.DetectObjectInScenesAsync(imageObjectData, new List<byte[]>() { imageSceneData });
+    // La méthode ci-dessous permet de retourner une image depuis un tableau de bytes,
+    //var imageData = new bytes[];
+    return Results.File(result[0].ImageData, "image/png");
+}).DisableAntiforgery(); 
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

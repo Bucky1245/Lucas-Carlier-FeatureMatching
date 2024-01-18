@@ -26,4 +26,16 @@
     <ProjectReference Include="..\..\src\Lucas.carlier.FeatureMatching\Lucas.carlier.FeatureMatching.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Carlier-Lucas-object.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Scenes\Carlier-Lucas-scene-0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Scenes\Carlier-Lucas-scene-1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
